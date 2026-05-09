@@ -7,8 +7,6 @@
 
 Temperaturas = [ 36.2, 37.5, 38.4, 39.1, 38.9, 36.8, 40.2, 39.5, 37.2, 38.1 ]
 
-ResultadoLista = ("")
-
 Contador = 0
 
 Consecutivos = 0
