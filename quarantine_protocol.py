@@ -5,13 +5,30 @@
 #Descripcion/Description: Implementación de la lógica de detección de riesgos secuenciales (Protocolo de Cuarentena).
 
 
-Temperaturas = [ 36.2, 37.5, 38.4, 39.1, 38.9, 36.8, 40.2, 39.5, 37.2, 38.1 ]
+Temperaturas = []
 
 Contador = 0
 
 Consecutivos = 0
 
 Limite = 38.0
+
+print("Ingresa los valores numericos de temperatura, Cuando hayas finalizado inserta la palabra 'salir': ")
+
+while True: #Usamos .strip para eliminar espacios al inicio y al final.
+    entrada = input("Dato: ").strip().lower() #.lower() hace que "sAlir" sin importar cuantas mayusculas lleve sea "salir".
+    if entrada == "salir" or entrada == "exit": #El bucle se rompera siempre que se escriba salir o exit.
+        break #Rompera el bucle While
+
+    entrada_corregida = entrada.replace(",", ".") #Esto reemplazara todas las comas por puntos para que al equivocarse el usuario no cause el except valueerror.
+
+    try: #Conversion de Entrada a float y acepta las comas.
+        i = float(entrada_corregida)
+        Temperaturas.append(i)
+    except ValueError:
+        print("Error: Ingrese numeros validos o la palabra 'salir': ")
+
+
 
 #La función Principal es buscar en Temperaturas 3 datos mayores a 38.0 consecutivos, de lo contrario todo sera correcto.
 for n in Temperaturas:

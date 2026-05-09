@@ -1,0 +1,19 @@
+Gestión de Datos Dinámicos
+
+Objetivo: Evolucionar el Protocolo de Cuarentena para que procese información en tiempo real mediante la interacción con el usuario.
+
+Requerimientos técnicos:
+
+El Bucle Infinito: Usa un bucle while True para pedir temperaturas de forma constante.
+
+Centinela de Salida: El usuario debe poder escribir "salir" para terminar de ingresar datos manualmente.
+
+Conversión de Datos: Recuerda que lo que el usuario escribe llega como texto (string). Debes convertirlo a número decimal (float) para que tu lógica 
+de Limite = 38.0 siga funcionando.
+
+Parametros: El programa debe ser insensible a mayúsculas.
+
+Integración: Cada temperatura válida que se ingrese debe pasar por tu lógica de "3 seguidas" que ya construiste.
+
+Mision:
+Modifica tu código actual para que, en lugar de recorrer una lista predefinida, el bucle for sea reemplazado (o alimentado) por las entradas del usuario.
