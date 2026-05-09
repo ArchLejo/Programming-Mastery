@@ -1,0 +1,17 @@
+Problema:
+
+Diseñar un algoritmo que analizara una lista de temperaturas y tomara decisiones basadas en patrones específicos:
+
+Criterio de Riesgo: Cualquier temperatura mayor o igual a 38.0°C se considera un "pico de riesgo".
+
+Patrón Crítico: El algoritmo debe buscar 3 casos de riesgo consecutivos (uno tras otro).
+
+Salida Temprana (Early Exit): En el momento exacto en que se detectan los 3 casos seguidos, el programa debe detenerse inmediatamente (usando break) 
+para ahorrar recursos, sin procesar el resto de la lista.
+
+Reseteo de Estado: Si aparece una temperatura normal (menor a 38.0), el contador de consecutivos debe volver a cero para asegurar que la racha detectada 
+sea realmente seguida.
+
+Mensajes:
+Si se encuentra la racha: "Alerta: Se ha detectado un pico en la lista de Temperaturas."
+Si se termina la lista sin encontrar la racha: "Resultados completamente normales..."
